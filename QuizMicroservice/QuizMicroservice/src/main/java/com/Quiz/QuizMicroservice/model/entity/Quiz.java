@@ -1,10 +1,5 @@
 package com.Quiz.QuizMicroservice.model.entity;
 
-import java.util.List;
-
-import org.aspectj.weaver.patterns.TypePatternQuestions.Question;
-import org.springframework.http.ResponseEntity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +16,7 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-   //use this not to save in db
+   //use transient not to save in db
     //transient private List<QuestionEntity> question;
     transient private QuestionEntity question;
 
